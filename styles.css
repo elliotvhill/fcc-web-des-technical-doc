@@ -13,8 +13,73 @@ body {
     letter-spacing: 0.1em;
 }
 
+.doc-header {
+    grid-area: header;
+}
+
+#nav-header {
+    grid-area: nav-header;
+}
+
+.navbar {
+    grid-area: navbar;
+    background-color: aqua;
+    margin: 0;
+    height: 100vh;
+    position: fixed;
+}
+
+#Header_1 {
+    grid-area: section-1;
+}
+
+#Header_2 {
+    grid-area: section-2;
+}
+
+#Header_3 {
+    grid-area: section-3;
+}
+
+#Header_4 {
+    grid-area: section-4;
+}
+
+#Header_5 {
+    grid-area: section-5;
+}
+
 header {
     font-size: 1.45rem;
     font-weight: 400;
     letter-spacing: 0.075em;
+}
+
+#main-doc {
+    display: grid;
+    /* gap: 40px; */
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas:
+        "nav-header header"
+        "navbar main"
+        "navbar section-1"
+        "navbar section-2"
+        "navbar section-3"
+        "navbar section-4"
+        "navbar section-5";
+}
+
+#navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: fixed;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 1.2rem;
+        margin: 1rem 2rem;
+    }
 }
