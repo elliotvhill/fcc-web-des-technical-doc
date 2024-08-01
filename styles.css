@@ -11,25 +11,33 @@ body {
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0.1em;
+    position: sticky;
+    top: 0;
+    background-color: gray;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    /* width: 100%; */
 }
 
-.doc-header {
+/* .doc-header {
     grid-area: header;
 }
 
 #nav-header {
     grid-area: nav-header;
-}
+} */
 
 .navbar {
-    grid-area: navbar;
+    /* grid-area: navbar; */
+    display: flex;
+    flex-direction: column;
     background-color: aqua;
     margin: 0;
     height: 100vh;
     position: fixed;
 }
 
-#Header_1 {
+/* #Header_1 {
     grid-area: section-1;
 }
 
@@ -47,7 +55,7 @@ body {
 
 #Header_5 {
     grid-area: section-5;
-}
+} */
 
 header {
     font-size: 1.45rem;
@@ -55,9 +63,14 @@ header {
     letter-spacing: 0.075em;
 }
 
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
 #main-doc {
-    display: grid;
-    /* gap: 40px; */
+    /* display: grid;
+    gap: 1rem;
     grid-template-columns: 1fr 4fr;
     grid-template-areas:
         "nav-header header"
@@ -66,7 +79,14 @@ header {
         "navbar section-2"
         "navbar section-3"
         "navbar section-4"
-        "navbar section-5";
+        "navbar section-5"; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around; */
+    border: 2px solid aquamarine;
+    margin: 0 1rem;
 }
 
 #navbar {
@@ -75,6 +95,10 @@ header {
     justify-content: flex-start;
     align-items: flex-start;
     position: fixed;
+    left: 0px;
+    border: 2px solid magenta;
+    /* padding: 1rem 0.5rem 1rem 1rem;
+    margin: 0.5rem; */
 }
 
 @media (max-width: 600px) {
